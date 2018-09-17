@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { DebounceInput } from "react-debounce-input";
-import RepoList from "./RepoList";
+import RepoSearch from "./RepoSearch";
 import "./App.css";
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
           debounceTimeout={300}
           onChange={this.handleQueryChange}
         />
-        <RepoList queryString={this.state.query} />
+        <RepoSearch queryString={this.state.query} />
       </div>
     );
   }

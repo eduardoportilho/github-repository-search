@@ -32,7 +32,7 @@ const SEARCH_REPOS_GQL = gql`
   }
 `;
 
-const RepoList = ({ queryString }) => {
+const RepoSearch = ({ queryString }) => {
   if (!queryString || !queryString.trim().length) return null;
   return (
     <Query query={SEARCH_REPOS_GQL} variables={{ queryString }}>
@@ -51,4 +51,4 @@ const RepoList = ({ queryString }) => {
   );
 };
 
-export default RepoList;
+export default RepoSearch;
