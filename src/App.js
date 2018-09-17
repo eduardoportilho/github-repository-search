@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Repos from "./Repos";
+import { DebounceInput } from "react-debounce-input";
+import RepoList from "./RepoList";
 import "./App.css";
 
 class App extends Component {
@@ -14,12 +15,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        <input
+        <DebounceInput
           type="text"
-          value={this.state.query}
+          placeholder="Search repositories…"
+          debounceTimeout={300}
           onChange={this.handleQueryChange}
         />
-        <Repos queryString={this.state.query} />
+        <RepoList queryString={this.state.query} />
       </div>
     );
   }
