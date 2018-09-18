@@ -13,15 +13,11 @@ const SEARCH_REPOS_GQL = gql`
             id
             name
             description
-            descriptionHTML
             url
             owner {
               login
             }
             stargazers {
-              totalCount
-            }
-            forks {
               totalCount
             }
             updatedAt
