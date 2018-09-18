@@ -28,6 +28,11 @@
   margin: 5px;
   padding: 0 5px;
   overflow: hidden;
+  cursor: pointer;
+}
+
+.repo-card.selected {
+  opacity: 0.5;
 }
 
 @media (max-width: 699px) {

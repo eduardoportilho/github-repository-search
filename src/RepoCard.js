@@ -1,7 +1,10 @@
 import React from "react";
 
-const RepoCard = ({ repo }) => (
-  <div className="repo-card">
+const RepoCard = ({ repo, selected, toggleSelection }) => (
+  <div
+    className={`repo-card ${selected ? "selected" : ""}`}
+    onClick={() => toggleSelection(repo.id, selected)}
+  >
     <h2>{repo.name}</h2>
     <p>{repo.description}</p>
     <ul>
