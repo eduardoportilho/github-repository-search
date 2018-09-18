@@ -15,12 +15,15 @@ class App extends Component {
   render() {
     return (
       <div>
-        <DebounceInput
-          type="text"
-          placeholder="Search repositories…"
-          debounceTimeout={300}
-          onChange={this.handleQueryChange}
-        />
+        <div className="top-bar">
+          <h1>GitHub Repository Search</h1>
+          <DebounceInput
+            type="text"
+            placeholder="Search repositories…"
+            debounceTimeout={300}
+            onChange={this.handleQueryChange}
+          />
+        </div>
         <RepoSearch queryString={this.state.query} />
       </div>
     );

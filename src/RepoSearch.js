@@ -42,10 +42,13 @@ const RepoSearch = ({ queryString }) => {
           console.log(error);
           return <p>Error :(</p>;
         }
-
-        return data.search.edges.map(({ node: repo }) => (
-          <RepoCard key={repo.id} repo={repo} />
-        ));
+        return (
+          <div className="repo-container">
+            {data.search.edges.map(({ node: repo }) => (
+              <RepoCard key={repo.id} repo={repo} />
+            ))}
+          </div>
+        );
       }}
     </Query>
   );
